@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generator danych osobowych</title>
+</head>
+<body>
+    <h1>Generator danych osobowych</h1>
+    <pre id="output"></pre>
+
+    <script>
+        const imiona = ["Jan", "Kacper", "Patryk", "Michał", "Łukasz", "Jakub", "Piotr"];
+
+        const nazwiska = ["Nowak", "Kowalski", "Lewandowskji", "Duda", "Kowal", "Kamiński", "Zieliński"];
+
+        function generateData() {
+            const output = document.getElementById("output")
+            const dane = [];
+
+            for (let i = 0; i < 5; i++) {
+                const name = imiona[Math.floor(Math.random() * imiona.length)];
+                const nazwiska = nazwiska[Math.floor(Math.random() * nazwiska.length)];
+                const wiek = Math.floor(Math.random() * (80 - 18)) + 18;
+                const tel = Math.floor(Math.random() * (8000000 - 5000000)) + 5000000;
+
+                const osoba = {
+                    name: imiona,
+                    surname: nazwiska,
+                    age: wiek,
+                    phone: tel
+                };
+
+                dane.push(osoba);
+            }
+            output.textContent = JSON.stringify(dane, null, 2)
+        }
+    </script>
+</body>
+</html>
