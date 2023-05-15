@@ -40,6 +40,7 @@ form.addEventListener('submit', function (event) {
   const surnameInput = document.getElementById('surname');
   const emailInput = document.getElementById('email');
   const passwordInput = document.getElementById('password');
+  const passwordValidate = document.getElementById('passwordValidate');
   const genderInput = document.getElementById('gender');
   const phoneInput = document.getElementById('phone');
   const birthdateInput = document.getElementById('birthdate');
@@ -99,6 +100,20 @@ form.addEventListener('submit', function (event) {
     return;
   }else{
     document.getElementById("password-error").innerHTML = null;
+  }
+
+  if (!isNotEmpty(passwordValidate.value)) {
+    document.getElementById("passwordVal-error").innerHTML = "Powtórz hasło ";
+    return;
+  }else{
+    document.getElementById("passwordValidate-error").innerHTML = null;
+  }
+
+  if (passwordValidate.value!=passwordInput.value) {
+    document.getElementById("passwordValidate-error").innerHTML = "Hasła się nie zgadzają ";
+    return;
+  }else{
+    document.getElementById("passwordValidate-error").innerHTML = null;
   }
 
   if (!isNotEmpty(genderInput.value)) {
