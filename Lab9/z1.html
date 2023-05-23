@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #register{
+            margin: auto;
+            text-align: center;
+            background-color: grey;
+            width: 300px;
+            border-radius: 5%;
+            }
+        #login1{
+            margin: auto;
+            text-align: center;
+            background-color: grey;
+            width: 300px;
+            border-radius: 5%;
+            }
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div id="register">
+        <h1>Formularz rejestracyjny</h1>
+        <form>
+            <div>
+            <label for="login">Login:</label>
+            <input type="text" id="login" name="login" required minlength="2" maxlength="25"><br>
+            <span id="login-error"></span>
+            <br><br>
+            </div>
+
+            <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br>
+            <span id="email-error"></span>
+            <br><br>
+            </div>
+
+            <div>
+            <label for="password">Hasło:</label>
+            <input type="password" id="password" name="password"><br>
+            <span id="password-error"></span>
+            <br><br>
+            </div>
+
+            <div>
+            <label for="passwordValidate">Powtórz hasło:</label>
+            <input type="password" id="passwordValidate" name="passwordValidate"><br>
+            <span id="passwordValidate-error"></span>
+            <br><br>
+            </div>
+
+            <div>
+                <button type="submit" id="submit1">Sign in</button>
+            </div>
+
+        </form>
+        </div>
+        <br><br><br>
+        <div id="login1">
+            <h1>Formularz logowania</h1>
+            <form1>
+                <div>
+                <label for="loginR">Login:</label>
+                <input type="text" id="loginR" name="loginR" required minlength="2" maxlength="25"><br>
+                <span id="loginR-error"></span>
+                <br><br>
+                </div>
+    
+                <div>
+                <label for="passwordR">Hasło:</label>
+                <input type="password" id="passwordR" name="passwordR"><br>
+                <span id="passwordR-error"></span>
+                <br><br>
+                </div>
+        
+                <div>
+                    <button type="submit" id="submit1">Sign in</button>
+                </div>
+    
+            </form1>
+        </div>
+    </div>
+
+<script src="z1.js"></script>
+</body>
+</html>
